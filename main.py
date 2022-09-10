@@ -23,6 +23,11 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+async def home():
+    return "Server is running"
+
+
 @app.get("/chart-data")
 async def fetch_chart_data():
     return {

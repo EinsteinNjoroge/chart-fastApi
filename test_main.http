@@ -18,3 +18,38 @@ client.test("Fetch comments", function() {
 });
 %}
 
+
+### Post a new comment
+POST http://127.0.0.1:8000/comments
+Content-Type: application/json
+
+{
+  "username": "Tester",
+  "message": "New Comment",
+  "year": "2020",
+  "industry": "Finance"
+}
+
+> {%
+client.test("Can create a new comment successfully", function() {
+    client.assert(response.status === 201, "Cannot create a new comment");
+});
+%}
+
+
+### Post a malformed new comment
+POST http://127.0.0.1:8000/comments
+Content-Type: application/json
+
+{
+  "industry": "NON-EXISTENT-INDUSTRY",
+  "username": "Tester",
+  "message": "New Comment",
+  "year": "2020"
+}
+
+> {%
+client.test("Returns an error if industry does not exist", function() {
+    client.assert(response.status === 400, "Industry does not exist");
+});
+%}

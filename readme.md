@@ -12,6 +12,8 @@ This API has 2 endpoints and accept 2 methods [GET, POST]:
 1. ##### Clone this repository
 > https://github.com/EinsteinNjoroge/chart-fastApi
 
+ - Navigate to the project's directory in your terminal
+
 2. ##### Install Python
 
 ​	You can find the documentation for python **[here](https://www.python.org/)**

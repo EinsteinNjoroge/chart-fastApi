@@ -1,0 +1,20 @@
+### Fetch chart-data
+GET http://127.0.0.1:8000/chart-data
+
+> {%
+client.test("Fetch chart-data", function() { client.assert(response.status === 200, "Cannot fetch chart-data"); });
+client.test("Chart-data has the required keys", function() {
+    client.assert(response.body.hasOwnProperty("chart_data"), "response does not include chart_data");
+    client.assert(response.body.hasOwnProperty("industries"), "response does not include industries");
+ });
+%}
+
+### Fetch comments
+GET http://127.0.0.1:8000/comments
+
+> {%
+client.test("Fetch comments", function() {
+    client.assert(response.status === 200, "Cannot fetch comments");
+});
+%}
+

@@ -27,9 +27,13 @@ This API has 2 endpoints and accept 2 methods [GET, POST]:
    Run the command `pip -r install requirements.txt` on the command line
 
 5. ##### Start the server
-   Run the command `python -m uvicorn main:app --reload` on the command line, this will run the server on port `8080`.
+   Run the command `python -m uvicorn main:app` on the command line, this will run the server on port `8080`.
 
    You can check if the server is running by opening [http://127.0.0.1:8000](http://127.0.0.1:8000) on your browser 
 
    Once you start the server, you can access more detailed API documentation here [http://127.0.0.1:8000/docs#/](http://127.0.0.1:8000/docs#/)
 
+6. ##### Testing
+   unit-tests on this repository are written using `TestClient` from `FastApi`.
+
+   Run the test by running `pytest` on the command line

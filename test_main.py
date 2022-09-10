@@ -25,7 +25,7 @@ def test_create_new_comment():
         json={
             "username": "foobar",
             "message": "Foo Bar",
-            "year": "2014",
+            "year": "2010",
             "industry": "Finance"
         },
     )
@@ -42,7 +42,7 @@ def test_create_new_comment_with_non_existent_industry():
         json={
             "username": "foobar",
             "message": "Foo Bar",
-            "year": "2014",
+            "year": "2010",
             "industry": "NON-EXISTENT INDUSTRY"
         },
     )
